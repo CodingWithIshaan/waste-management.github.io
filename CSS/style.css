@@ -1,0 +1,726 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    min-width: 425px;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+html,body{
+    margin:0;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.LeftNavbar {
+    /* background-color: purple; */
+    /* background-color: purple; */
+    width: 50%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 6px;
+}
+
+.logo {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    width: 100%;
+    border: 5px solid rgba(147, 147, 147, 0);
+    border-radius: 50px;
+}
+
+.Website_Name {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.Navbar {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.Navbar .OpenMenu{
+    font-size: 2rem;
+    margin: 0px 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.RightNavbar .CloseMenu i{
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+
+.RightNavbar {
+    width: 100%;
+    /* background-color: rgb(0, 0, 0); */
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 6px;
+
+}
+
+.RightNavbar li {
+    list-style: none;
+
+}
+
+.RightNavbar li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 0px 30px;
+}
+
+.RightNavbar li a:hover {
+    color: lightgray;
+}
+
+.RightNavbar li a:active {
+    color: gray;
+}
+
+@media only screen and (max-width:1200px) {
+    .Navbar .RightNavbar{
+        height: 29vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #1b1f23;
+        transition: top 1s ease 0s;
+        display: none;
+    }
+
+    .LeftNavbar{
+        width: 100%;
+    }
+
+    .LeftNavbar .logo img{
+        width: 46%;
+    }
+
+    .RightNavbar .CloseMenu{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .RightNavbar .CloseMenu i{
+        display: block;
+        color: white;
+    }
+
+    .RightNavbar li{
+        margin-top: 5px;
+    }
+
+
+    .Navbar .OpenMenu{
+        display: block;
+        color: white;
+    }
+
+    /*nav .Navbar .RightNavbar{
+        flex-direction: column;
+        display: none;
+    }
+
+    
+    nav .Navbar .OpenMenu{
+        display: block;
+        color: white;
+    } */
+
+    
+}
+
+@media only screen and (max-width:799px){
+    .LeftNavbar .logo img{
+        width: 100%;
+    }
+}
+
+.BG {
+    background: rgba(0, 0, 0, 0) url('../IMAGES/banner.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.BGNavbar {
+    background-color: #03a196;
+}
+
+.LandingPage {
+    height: 100vh;
+}
+
+.text-big {
+    font-size: 40px;
+    padding: 5px 0px;
+}
+
+.text-small {
+    font-size: 15px;
+    padding: 5px 0px;
+}
+
+.Causes_Sec {
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.5) url("../IMAGES/causes.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+    color: whitesmoke;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 100px;
+}
+
+.CausesHeader {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.CausesHeader h1::after {
+    content: '';
+    height: 2px;
+    width: 65px;
+    background-color: #03a196;
+    border-radius: 50px;
+    display: block;
+    margin: 10px auto;
+}
+
+.Statistics_Sec {
+    height: 100vh;
+    background-color: rgb(25, 25, 25);
+    color: whitesmoke;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 100px;
+}
+
+.StatisticsHeader {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.StatisticsHeader h1::after {
+    content: '';
+    height: 2px;
+    width: 65px;
+    background-color: #03a196;
+    display: block;
+    margin: 10px auto;
+}
+
+.ContainerBoxesStats{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.Public_Box_Stats{
+    width: 100px;
+    height: 100px;
+    margin: 10px 70px;
+    text-align: center;
+}
+
+.Public_Box_Stats h1::after{
+    content: '';
+    height: 2px;
+    width: 65px;
+    background-color: #03a196;
+    display: block;
+    margin: 10px auto;
+}
+
+@media only screen and (max-width:777px){
+    .Statistics_Sec{
+        height: 180vh;
+
+    }
+    .ContainerBoxesStats{
+        flex-direction: column;
+
+    }
+
+}
+
+.Impact_Sec {
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.5) url("../IMAGES/impact.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+    color: whitesmoke;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 100px;
+}
+
+.Impact_Header {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.Impact_Header h1::after {
+    content: '';
+    height: 2px;
+    width: 65px;
+    background-color: #03a196;
+    display: block;
+    margin: 10px auto;
+}
+
+.Prevention_Sec {
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.5) url("../IMAGES/prevention.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+    color: whitesmoke;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 20px 100px;
+    flex-direction: column;
+}
+
+.Prevention_Header {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.Prevention_Header h1::after {
+    content: '';
+    height: 2px;
+    width: 90px;
+    background-color: #03a196;
+    display: block;
+    margin: 10px auto;
+}
+
+.Public_Box{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    background-color: white;
+    color: black;
+    flex-direction: column;
+    margin: 20px 50px;
+    padding: 10px 30px;
+    height: 430px;
+    width: 376px;
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+.Public_Box h3{
+    margin-top: 5px;
+}
+
+.Public_Box p{
+    margin-top: 15px;
+    text-align: justify;
+    font-size: 14px;
+}
+
+.ContainerBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+@media only screen and (max-width:1334px) {
+    .Public_Box{
+        margin: 20px 10px;
+    }
+}
+
+@media only screen and (max-width:1200px){
+    .ContainerBox{
+        flex-direction: column;
+    }
+}
+
+.Support_Sec {
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.5) url("../IMAGES/support.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    padding: 20px 100px;
+}
+
+.Support_Header {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.Support_Header h1::after {
+    content: '';
+    height: 2px;
+    width: 65px;
+    background-color: #03a196;
+    display: block;
+    margin: 10px auto;
+}
+
+.ContactBox {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 100px;
+    min-height: 100vh;
+    background-color: #F7F7F7;
+}
+
+.contentContact {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    /* max-width: 750px; */
+}
+
+.contentContact h1::after {
+    content: '';
+    height: 2px;
+    width: 90px;
+    background-color: #03a196;
+    display: block;
+    margin: 10px auto;
+}
+
+.ContactInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text h3 {
+    color: gray;
+    margin: 10px 0px;
+}
+
+.ContactBoxes {
+    width: 365px;
+    height: 185px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.ContactBox2 {
+    border-right: 1px solid gray;
+    border-left: 1px solid gray;
+}
+
+.ContactIcon {
+    min-height: 50px;
+    font-size: 50px;
+    color: #03a196;
+}
+
+.ContactForm {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.InputLeft {
+    padding: 8px;
+    width: 48.8%;
+    outline: none;
+    margin-right: 10px;
+}
+
+.InputRight {
+    padding: 8px;
+    width: 48.8%;
+    outline: none;
+    margin-left: 10px;
+}
+
+.InputSubject {
+    width: 100%;
+    padding: 8px;
+}
+
+.ContactForm input,
+textarea {
+    margin-top: 10px;
+}
+
+.InputTextarea {
+    outline: none;
+    resize: none;
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+}
+
+.SendButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.SendButton input {
+    background-color: #03a196;
+    text-align: center;
+    border: none;
+    border-radius: 50px;
+    height: 34px;
+    width: 125px;
+    color: white;
+}
+
+@media only screen and (max-width:1115px){
+    .ContactInfo{
+        flex-direction: column;
+    }
+    .ContactBox2{
+        border: none;
+    }
+    .InputLeft{
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .InputRight{
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+.FooterSection1 {
+    background-color: #1b1f23;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    width: 100%;
+    padding: 30px 100px;
+}
+
+.Column_Public_Footer{
+    list-style: none;
+    width: 100%;
+    margin: 10px 20px;
+}
+
+.ContentColumn1 h3{
+    color: #03a196;
+}
+
+.ContentColumn1 h3::after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    background-color: white;
+    display: block;
+    margin: 10px 0px;
+}
+
+
+
+.ContentColumn2 li {
+    margin-top: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid white;
+}
+
+.ContentColumn2 li a {
+    text-decoration: none;
+    color: white;
+}
+
+.ContentColumn2 li a:hover {
+    color: #03a196;
+}
+
+.ContentColumn2 h3{
+    color: #03a196;
+}
+
+.ContentColumn2 h3::after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    background-color: white;
+    display: block;
+    margin: 10px 0px;
+}
+
+
+
+.ContentColumn3 li a {
+    text-decoration: none;
+    color: white;
+}
+
+.ContentColumn3 li a:hover {
+    color: #03a196;
+}
+
+.ContentColumn3 li {
+    margin-top: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid white;
+}
+
+.ContentColumn3 h3{
+    color: #03a196;
+}
+
+.ContentColumn3 h3::after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    background-color: white;
+    display: block;
+    margin: 10px 0px;
+}
+
+.ContentColumn4 h3{
+    color: #03a196;
+}
+
+.ContentColumn4 h3::after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    background-color: white;
+    display: block;
+    margin: 10px 0px;
+}
+
+.FooterSection2 {
+    background-color: #03a196;
+    color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+
+/* @media only screen and (max-width: 1132px)
+
+    For FooterSection1
+    {
+    .FooterSection1 {
+        height: 100%;
+        flex-direction: column;
+    }
+
+    .Column_Public_Footer{
+        margin: 10px 0px;
+        text-align: center;
+    }
+
+    .Column1 {
+        width: 100%;
+    }
+
+    .Column2 {
+        width: 100%;
+    }
+
+    .Column3 {
+        width: 100%;
+    }
+
+    .FooterIconsContainer {
+        justify-content: center;
+    }
+}
+
+For FooterSection2
+@media only screen and (max-width: 610px)
+    .footer-text {
+        font-size: 2.5vw;
+    }
+} */
+
+@media only screen and (max-width:1192px){
+    .FooterSection1{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .Column_Public_Footer{
+        margin-top: 65px;
+    }
+
+    .ContentColumn4 div .Map img{
+        display: block;
+        width: 226px;
+        margin: auto;
+    }
+}
