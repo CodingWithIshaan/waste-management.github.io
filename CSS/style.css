@@ -8,7 +8,7 @@
 html {
     scroll-behavior: smooth;
 }
-
+ 
 body{
     min-width: 425px;
 }
@@ -349,6 +349,16 @@ html,body{
     margin: 10px auto;
 }
 
+.Box1Prevention{
+    height: 210px;
+}
+.Box2Prevention{
+    height: 210px;
+}
+.Box3Prevention{
+    height: 210px;
+}
+
 .Public_Box{
     display: flex;
     align-items: center;
@@ -587,7 +597,9 @@ textarea {
     margin: 10px 0px;
 }
 
-
+.ContentColumn1{
+    text-align: justify;
+}
 
 .ContentColumn2 li {
     margin-top: 10px;
